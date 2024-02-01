@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Partial("/Views/Default/HeadPartial.cshtml")
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    @Html.Partial("/Views/Default/NavbarPartial.cshtml")
+    <!-- End of Page Navbar -->
+    <!-- page header -->
+    @Html.Action("FeaturePartial")
+    <!-- end of page header -->
+    <!-- about section -->
+    @Html.Action("AboutPartial")
+    <!-- service section -->
+    @Html.Action("ServicePartial")
+    <!-- end of service section -->
+    <!-- portfolio section -->
+    <!-- end of portfolio section -->
+    @Html.Action("PorfolioPartial")
+
+    <!-- end of section -->
+    <!-- testimonial section -->
+    @Html.Action("TestmonialPartial")
+    <!-- end of testimonial section -->
+    <!-- blog section -->
+    <!-- end of blog section -->
+    <!-- contact section -->
+    @Html.Action("ContactPartial")
+    <!-- end of contact section -->
+    <!-- footer -->
+    @Html.Action("SocailPartial")
+    <!-- end of page footer -->
+    <!-- core  -->
+    @Html.Partial("/Views/Default/ScriptPartial.cshtml")
+
+</body>
+
+</html>

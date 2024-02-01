@@ -1,0 +1,19 @@
+﻿@model MeyawoPortfolio.Models.TblFuture
+@{
+    ViewBag.Title = "CreateFuture";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h2>Yeni Başlık girişi</h2> 
+<form method="post">
+    <label>Ana Başlık</label>
+    @Html.TextBoxFor(x => x.Header, new { @class = "table table - bordered" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table - bordered" })
+    <br />
+    <label>Alt Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table - bordered" })
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

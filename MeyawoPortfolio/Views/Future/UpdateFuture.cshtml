@@ -1,0 +1,21 @@
+﻿@model MeyawoPortfolio.Models.TblFuture
+@{
+    ViewBag.Title = "UpdateFuture";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h2>Başlık  Güncelleme</h2>
+<form method="post">
+    <label>Başlık Id</label>
+    @Html.TextBoxFor(x => x.FutureID, new { @class = "table table - bordered" })
+    <br />
+    <label>Ana Başlık</label>
+    @Html.TextBoxFor(x => x.Header, new { @class = "table table - bordered" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table - bordered" })
+    <br />
+    <label>Ünvan</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table - bordered" })
+    <button class="btn btn-info">Kaydet</button>
+</form>

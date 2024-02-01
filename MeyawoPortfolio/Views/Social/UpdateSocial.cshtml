@@ -1,0 +1,22 @@
+﻿@model MeyawoPortfolio.Models.TblSocialMedia
+@{
+    ViewBag.Title = "UpdateSocial";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h4>Sosyal Medya Güncelleme</h4> 
+<form method="post">
+    <label>Sosyal Medya ID</label>
+    @Html.TextBoxFor(x => x.SocialMediaID, new { @class = "table table - bordered" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Tıtle, new { @class = "table table - bordered" }) ,
+    <br />
+    <label>Sosyal Medya Url</label>
+    @Html.TextBoxFor(x => x.SocialMediaUrl, new { @class = "table table - bordered" })
+    <br />
+    <label>Icon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "table table - bordered" })
+    <button class="btn btn-info">Bilgileri Güncelle</button>
+</form>
+

@@ -1,0 +1,29 @@
+﻿@model MeyawoPortfolio.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h2>UpdateProject</h2>
+
+<h4>Yeni Proje Ekleme Sayfası</h4>
+<form method="post">
+    <label>Yeni Proje Başlığı</label>
+    <input type="text" name="ProjectID" readonly  value="@Model.ProjectID" class="table table - bordered" />
+    <br />
+    <label>Yeni Proje Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Proje Açıklaması</label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Resim Url</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Proje Url</label>
+    @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Proje Kategorisi</label>
+    @Html.DropDownListFor(x => x.ProjectCategory, (List<SelectListItem>)ViewBag.v, new { @class = "table table - bordered" })
+    <button class="btn btn-info">Kaydet</button>
+</form>

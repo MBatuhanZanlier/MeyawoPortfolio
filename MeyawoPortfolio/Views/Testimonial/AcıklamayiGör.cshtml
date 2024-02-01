@@ -1,0 +1,28 @@
+﻿@model MeyawoPortfolio.Models.TblTestimonial
+@{
+    ViewBag.Title = "AcıklamayiGör";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Referans ID</th>
+        <th>Ad Soyad</th>
+        <th>Açıklamayı Gör</th>
+        <th>link</th>
+        <th>Durum</th>
+    </tr>
+    
+        <tr>
+            <td>@Model.TestimonialID</td>
+            <td>@Model.NameSurname</td> 
+            <td>@Model.Description</td> 
+            <td>@Model.ImageUrl</td> 
+            <td>@Model.Status</td> 
+              
+        </tr>
+
+    
+</table>
+<td><a href="/Testimonial/Index" class="btn btn-outline-danger">Geri dön</a></td>
+
