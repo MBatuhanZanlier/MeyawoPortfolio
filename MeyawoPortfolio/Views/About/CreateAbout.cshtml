@@ -1,0 +1,24 @@
+﻿@model MeyawoPortfolio.Models.TblAbout
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h4>Yeni Hakkımda oluşturma Sayfası</h4> 
+<form method="post">
+    <label>Yeni Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Hakkımda</label>
+    @Html.TextBoxFor(x => x.Header, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Açıklama </label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "table table - bordered" })
+    <br />
+    <label>Yeni Görsel</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table - bordered" })
+    <br />
+    <button class="btn btn-info">Oluştur</button>
+    <td><a href="/About/Index" class="btn btn-outline-danger">Geri dön</a></td>
+</form>
+

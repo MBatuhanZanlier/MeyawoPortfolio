@@ -4,25 +4,22 @@
     Layout = "~/Views/AdminLayout/_Layoout.cshtml";
 }
 
-<h2>Gelen Mesajlar Sayfası</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>Mesaj Id</th>
-        <th>Gönderen</th>
-        <th>Kategori</th>
-        <th>Tarih</th>
-        <th>Mesajı Aç</th>
-        <th>Mesajı Sil</th>
-    </tr> 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.ContactID</td>
-            <td>@item.NameSurname</td>
-            <td>@item.MessageCategory</td>
-            <td>@item.SendDate</td>
-            <td><a href="#" class="btn btn-warning">Mesajı'da Aç</a></td>
-            <td><a href="#" class="btn btn-danger">Mesajı'da Sil</a></td>
-        </tr>
-    }
-</table>
+<h1>Yeni <span class="badge bg-secondary">Gelen Mesajlar</span></h1>
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+
+        @foreach (var item in Model)
+        {
+            <a href="/Contact/DetailMessage/@item.ContactID" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@item.NameSurname</h5>
+                    <small class="text-muted">@item.SendDate</small>
+                </div>
+                <p class="mb-1">@item.Message</p>
+                <small class="text-muted">@item.Email</small>
+               
+            </a> 
+        }
+
+</div>

@@ -10,12 +10,14 @@
     @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table - bordered" })
     <br />
     <label>Yeni Referans Görseli</label>
-    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table - bordered" }) 
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table - bordered" })
     <br />
     <label>Yeni Açıklama</label>
     @Html.TextAreaFor(x => x.Description, new { @class = "table table - bordered" })
     <br />
     <label>Yeni Durum</label>
-    @Html.TextBoxFor(x => x.Status, new { @class = "table table - bordered" }) 
-<button class="btn btn-info">Kaydet</button>
+    @Html.TextBoxFor(x => x.Status, new { @class = "table table - bordered" })
+    <button class="btn btn-info">Kaydet</button>
+    <a href="/Testimonial/Index" class="btn btn-outline-danger">Geri dön</a>
+
 </form> 

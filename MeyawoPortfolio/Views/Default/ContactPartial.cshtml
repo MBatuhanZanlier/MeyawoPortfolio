@@ -1,25 +1,31 @@
-﻿@model  List<MeyawoPortfolio.Models.TblContact>
+﻿@model MeyawoPortfolio.Models.TblContact
 <section class="section" id="contact">
     <div class="container text-center">
-        <p class="section-subtitle">How can you communicate?</p>
-        <h6 class="section-title mb-5">Contact Me</h6>
+        <p class="section-subtitle">Nasıl iletişim Kurabilirsiniz?</p>
+        <h6 class="section-title mb-5">Benimle iletişime Geç</h6>
         <!-- contact form -->
-        <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+        @*<form action="" class="contact-form col-md-10 col-lg-8 m-auto">*@
+        @using (Html.BeginForm("CreateContact", "Contact", FormMethod.Post))
+        {
             <div class="form-row">
                 <div class="form-group col-sm-6">
-                    <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", placeholder = "Adınız ve Soyadınız", size = "50", required = "required" })
+                    @*<input type="text" size="50" class="form-control" placeholder="Ad Soyad" required>*@
                 </div>
                 <div class="form-group col-sm-6">
-                    <input type="email" class="form-control" placeholder="Enter Email" requried>
+                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Email Adresiniz", required = "required" })
+                    @*<input type="email" class="form-control" placeholder="Email Adresiniz" requried>*@
                 </div>
                 <div class="form-group col-sm-12">
-                    <textarea name="comment" id="comment" rows="6" class="form-control"
-                              placeholder="Write Something"></textarea>
+                    @Html.TextAreaFor(x => x.Message, 7, 3, new { @class = "form-control", placeholder = "Bana Birşeyler Yazın.", required = "required" })
+                    @*<textarea name="comment" id="comment" rows="6" class="form-control"
+                        p           laceholder="Metin giriniz"></textarea>*@
                 </div>
                 <div class="form-group col-sm-12 mt-3">
-                    <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                    <button type="submit" class="btn btn-outline-primary rounded">Gönder</button>
                 </div>
             </div>
-        </form><!-- end of contact form -->
+        }
+
     </div><!-- end of container -->
 </section>

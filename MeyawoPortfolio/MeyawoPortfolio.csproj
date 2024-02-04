@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\FutureController.cs" />
@@ -178,6 +179,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblProject.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblSertica.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblService.cs">
@@ -246,23 +250,32 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Templates\meyawo-1.0.0\assets\css\meyawo.css" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\analytics.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\analytics.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
-    <Content Include="Templates\meyawo-1.0.0\assets\imgs\customer-service.png" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Batuhan.jpeg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\beauty.png" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\csharp.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-1.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\girl.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\header.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\img-1.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\img-2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\man.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\pencil-case.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\personalization.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\Portfolıo.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Programlama101 %282%29.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Programlama201 %281%29.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\reshot-icon-phone-KDCRNMS29H.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\responsive.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\scooter.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\seo.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\shipped.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\sql-server.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\Sql.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\c.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\Todo.jpg" />
@@ -415,7 +428,6 @@
     <Content Include="Templates\sidebar-09\scss\style.scss" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\AdminLayout\_Layoout.cshtml" />
     <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
     <Content Include="Views\AdminLayout\_ScriptPartial.cshtml" />
@@ -560,6 +572,19 @@
     <Content Include="Views\Project\CreateProject.cshtml" />
     <Content Include="Views\Project\UpdateProject.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\CreateAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Default\SerticaPartial.cshtml" />
+    <Content Include="Views\Service\UpdateService.cshtml" />
+    <Content Include="Views\About\DetailsAbout.cshtml" />
+    <Content Include="Views\Contact\CreateContact.cshtml" />
+    <Content Include="Views\Contact\DetailsContact.cshtml" />
+    <Content Include="Views\Contact\DetailMessage.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Contact\OpenMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

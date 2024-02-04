@@ -4,14 +4,15 @@
     Layout = "~/Views/AdminLayout/_Layoout.cshtml";
 }
 
-<h2>Burası Proje Index Sayfası</h2>
+<h2>Proje Sayfası</h2>
 <table class="table table-bordered">
     <tr>
         <td>Proje ID</td>
         <td>Proje Başlığı</td>
         <td>Proje Kategorisi</td>
-        <td>Sil</td>
         <td>Güncelle</td>
+        <td>Sil</td>
+        
        
     </tr>
     @foreach (var item in Model)
@@ -20,8 +21,8 @@
             <td>@item.ProjectID</td>
             <td>@item.Title</td>
             <td>@item.TblCategory.CategoryName</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
             <td><a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-danger">Sil</a></td>
             <td><a href="#" class="btn btn-dark">GitHub'da Aç</a></td>
 
 

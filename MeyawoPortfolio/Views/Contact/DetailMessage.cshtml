@@ -1,0 +1,44 @@
+﻿@model MeyawoPortfolio.Models.TblContact
+@{
+    ViewBag.Title = "DetailMessage";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h1>Gelen Kutusu <span class="badge bg-secondary">@Model.NameSurname</span></h1>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>ID</th>
+        <th>Ad Soyad</th>
+        <th>Email</th>
+        <th>Mesaj</th>
+        <th>Tarih</th>
+        <th>Mesajı Gönder</th>
+        <th>Mesajı Sil</th>
+
+
+
+
+
+    </tr>
+
+
+    <tr>
+
+
+        <td>@Model.ContactID</td>
+        <td>@Model.NameSurname</td>
+        <td>@Model.Email</td>
+        <td>@Model.Message</td>
+        <td>@Model.SendDate</td>
+        <td><a href="/Contact/DetailsContact/@Model.ContactID" class="btn btn-success">Mesaj Gönder</a></td>
+        <td><a href="/Contact/DeleteContact/@Model.ContactID" class="btn btn-danger">Sil</a></td>
+
+
+    </tr>
+
+
+</table>
+<a href="/Contact/Index" class="btn btn-outline-danger">Geri dön</a>

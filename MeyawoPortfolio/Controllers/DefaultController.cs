@@ -42,7 +42,12 @@ namespace MeyawoPortfolio.Controllers
         {
             var values = db.TblProject.ToList();
             return PartialView(values);
-        } 
+        }  
+        public PartialViewResult SerticaPartial()
+        {
+            var values = db.TblSertica.ToList();
+            return PartialView(values);
+        }
         public PartialViewResult TestmonialPartial()
         {
             var values = db.TblTestimonial.ToList();

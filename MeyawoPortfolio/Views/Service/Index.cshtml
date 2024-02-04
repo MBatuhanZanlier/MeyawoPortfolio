@@ -9,17 +9,17 @@
     <tr>
         <th>Servis ID</th>
         <th>Başlık</th>
-        <th>Sil</th>
         <th>Güncelle</th>
-    </tr> 
+        <th>Sil</th>
+    </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.ServiceID</td>
             <td>@item.Title</td>
-            <td><a href="/Service/DeleteService/@item.ServiceID" class="btn btn-danger">sil</a></td>
             <td><a href="/Service/UpdateService/@item.ServiceID" class="btn btn-success">Güncelle</a></td>
-            
+            <td><a href="/Service/DeleteService/@item.ServiceID" class="btn btn-danger">sil</a></td>
+
         </tr>
     }
 </table>

@@ -18,7 +18,7 @@ namespace MeyawoPortfolio.Controllers
             ViewBag.fluteterProjectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
             ViewBag.IsnotReadMessageCount = db.TblContact.Where(x => x.IsRead == false).Count();
             ViewBag.lastProjectName = db.LastProjectName().FirstOrDefault();
-       
+            ViewBag.lastMessage = db.lastMessage().FirstOrDefault();
             return View();
         }
     }

@@ -1,0 +1,61 @@
+﻿@model MeyawoPortfolio.Models.TblContact
+@{
+    ViewBag.Title = "DetailsContact";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+<h1>Şuanda Şu kişiye Mail yollluyorsunuz <span class="badge bg-secondary">@Model.NameSurname</span></h1>
+<br />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Formun tam ortada olmasını sağla */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Formun çerçevesini ve arkaplan rengi */
+        form {
+            border: 2px solid black;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        /* Form elemanlarının genişliğini ve boşlukları */
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+            /* Gönder butonunun rengini ve kenar yuvarlaklığı */
+            input[type=submit] {
+                background-color: green;
+                color: white;
+                border-radius: 10px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action=method ="POST">
+
+
+            @Html.HiddenFor(x => x.ContactID)
+            <label for="ad">Ad Soyad</label>
+            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+            <label for="ad">Email Adresi</label>
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+            <label>Mesajınız</label>
+            <textarea id="mesaj" name="mesaj" rows="4" cols="40" required></textarea>
+            <input type="submit" value="Gönder">
+            <td>
+                <a href="/Contact/Index" class="btn btn-outline-dark">Mesajlara Geri dön</a>
+            </td>
+        </form>
+    </div>
+</body>
+</html>

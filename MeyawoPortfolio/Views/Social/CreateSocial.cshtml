@@ -4,16 +4,18 @@
     Layout = "~/Views/AdminLayout/_Layoout.cshtml";
 }
 
-<h4></h4>
+<h4>Yeni Sosyal Medya Oluştur</h4>
 
 <form method="post">
     <label>Yeni Başlık</label>
     @Html.TextBoxFor(x => x.Tıtle, new { @class = "table table - bordered" })
     <br />
-    <label>Yeni Social media Url</label>
+    <label>Yeni Sosyal Medya Url</label>
     @Html.TextBoxFor(x => x.SocialMediaUrl, new { @class = "table table - bordered" })
     <br />
     <label>Yeni Icon</label>
     @Html.TextBoxFor(x => x.Icon, new { @class = "table table - bordered" })
     <button class="btn btn-info">Kaydet</button>
+    <td><a href="/Social/Index" class="btn btn-outline-danger">Geri dön</a></td>
+
 </form>

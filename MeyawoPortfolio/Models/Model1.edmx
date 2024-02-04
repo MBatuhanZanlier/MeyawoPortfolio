@@ -73,6 +73,15 @@
           <Property Name="ProjectUrl" Type="nvarchar" MaxLength="250" />
           <Property Name="ProjectCategory" Type="int" />
         </EntityType>
+        <EntityType Name="TblSertica">
+          <Key>
+            <PropertyRef Name="SerticaID" />
+          </Key>
+          <Property Name="SerticaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="TblService">
           <Key>
             <PropertyRef Name="ServiceID" />
@@ -113,6 +122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="lastMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="LastProjectName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbMyPortfolioModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -122,6 +132,7 @@
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblFuture" EntityType="Self.TblFuture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSertica" EntityType="Self.TblSertica" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSocialMedia" EntityType="Self.TblSocialMedia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTestimonial" EntityType="Self.TblTestimonial" Schema="dbo" store:Type="Tables" />
@@ -251,6 +262,8 @@
           </AssociationSet>
           <EntitySet Name="TblAdminSidebar" EntityType="DbMyPortfolioModel.TblAdminSidebar" />
           <FunctionImport Name="LastProjectName" ReturnType="Collection(String)" />
+          <EntitySet Name="TblSertica" EntityType="DbMyPortfolioModel.TblSertica" />
+          <FunctionImport Name="lastMessage" ReturnType="Collection(String)" />
         </EntityContainer>
         <EntityType Name="TblAdminSidebar">
           <Key>
@@ -260,6 +273,15 @@
           <Property Name="SidebarTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CoverImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ProfileImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblSertica">
+          <Key>
+            <PropertyRef Name="SerticaID" />
+          </Key>
+          <Property Name="SerticaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -374,6 +396,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="LastProjectName" FunctionName="DbMyPortfolioModel.Store.LastProjectName" />
+          <EntitySetMapping Name="TblSertica">
+            <EntityTypeMapping TypeName="DbMyPortfolioModel.TblSertica">
+              <MappingFragment StoreEntitySet="TblSertica">
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SerticaID" ColumnName="SerticaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="lastMessage" FunctionName="DbMyPortfolioModel.Store.lastMessage" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

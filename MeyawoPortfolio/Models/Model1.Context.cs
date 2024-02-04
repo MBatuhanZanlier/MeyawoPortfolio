@@ -37,10 +37,16 @@ namespace MeyawoPortfolio.Models
         public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
         public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
         public virtual DbSet<TblAdminSidebar> TblAdminSidebar { get; set; }
+        public virtual DbSet<TblSertica> TblSertica { get; set; }
     
         public virtual ObjectResult<string> LastProjectName()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("LastProjectName");
+        }
+    
+        public virtual ObjectResult<string> lastMessage()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("lastMessage");
         }
     }
 }

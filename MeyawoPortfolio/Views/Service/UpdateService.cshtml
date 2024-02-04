@@ -1,11 +1,14 @@
-﻿@model  MeyawoPortfolio.Models.TblService
+﻿@model MeyawoPortfolio.Models.TblService
 @{
-    ViewBag.Title = "CreateService";
+    ViewBag.Title = "UpdateService";
     Layout = "~/Views/AdminLayout/_Layoout.cshtml";
 }
 
-<h2>Yeni Hizmet Girişi</h2>
+<h2>Hizmet Güncelleme Sayfası</h2>
 <form method="post">
+    <label>Yeni Başlık</label>
+    @Html.TextBoxFor(x => x.ServiceID, new { @class = "table table - bordered" })
+    <br />
     <label>Yeni Başlık</label>
     @Html.TextBoxFor(x => x.Title, new { @class = "table table - bordered" })
     <br />
@@ -17,4 +20,3 @@
     <button class="btn btn-info">Güncelle</button>
     <td><a href="/Service/Index" class="btn btn-outline-danger">Geri dön</a></td>
 </form>
-

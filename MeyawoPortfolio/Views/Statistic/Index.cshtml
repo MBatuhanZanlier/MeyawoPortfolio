@@ -5,11 +5,12 @@
 }
 
 
-
+ViewBag.lastMessage
 <h2>İstatistikler</h2>
 <div class="alert alert-danger">Kategori Sayısı: @ViewBag.categoryCount</div>
-<div class="alert alert-warning">Proje Sayısı: @ViewBag.v2</div>
-<div class="alert alert-info">Mesaj Sayısı: @ViewBag.v3</div>
-<div class="alert alert-dark">Flutter Proje Sayısı: @ViewBag.v4</div>
-<div class="alert alert-primary">Okunmamış Mesaj Sayısı: @ViewBag.v5</div>
-<div class="alert alert-success">Son Eklenen Proje: @ViewBag.v6</div>
+<div class="alert alert-warning">Proje Sayısı: @ViewBag.projectCount</div>
+<div class="alert alert-info">Mesaj Sayısı: @ViewBag.messageCount</div>
+<div class="alert alert-dark">Flutter Proje Sayısı: @ViewBag.fluteterProjectCount</div>
+<div class="alert alert-primary">Okunmamış Mesaj Sayısı: @ViewBag.IsnotReadMessageCount</div>
+<div class="alert alert-success">Son Eklenen Proje: @ViewBag.lastProjectName</div>
+<div class="alert alert-success">Son Mesaj atan kişi: @ViewBag.lastMessage</div>

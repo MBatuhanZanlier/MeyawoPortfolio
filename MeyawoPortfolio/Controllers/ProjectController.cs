@@ -37,6 +37,14 @@ namespace MeyawoPortfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index"); 
         }
+        public ActionResult DeleteProject(int id)
+        {
+            var value = db.TblProject.Find(id);
+            db.TblProject.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         [HttpGet]
         public ActionResult UpdateProject(int id)
         {

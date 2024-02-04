@@ -1,0 +1,32 @@
+﻿@model MeyawoPortfolio.Models.TblAbout
+@{
+    ViewBag.Title = "DetailsAbout";
+    Layout = "~/Views/AdminLayout/_Layoout.cshtml";
+}
+
+<h4>Hakkımda Sayfası</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Hakkımda</th>
+        <th>Açıklama</th>
+        <th>Görlsel</th>
+
+    </tr>
+
+
+    <tr>
+        <td>@Model.AboutID</td>
+        <td>@Model.Title</td>
+        <td>@Model.Header</td>
+        <td>@Model.Description</td>
+        <td>@Model.ImageUrl</td>
+
+
+    </tr>
+
+</table>
+<td><a href="/About/CreateAbout/" class="btn btn-primary">Yeni Kayıt Girişi</a></td>
+<td><a href="/About/Index" class="btn btn-outline-danger">Geri dön</a></td>
+

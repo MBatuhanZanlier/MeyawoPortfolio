@@ -4,12 +4,12 @@
     Layout = "~/Views/AdminLayout/_Layoout.cshtml";
 }
 
-<h2>UpdateProject</h2>
 
-<h4>Yeni Proje Ekleme Sayfası</h4>
+
+<h4>Proje Güncelleme Sayfası</h4>
 <form method="post">
     <label>Yeni Proje Başlığı</label>
-    <input type="text" name="ProjectID" readonly  value="@Model.ProjectID" class="table table - bordered" />
+    <input type="text" name="ProjectID" readonly value="@Model.ProjectID" class="table table - bordered" />
     <br />
     <label>Yeni Proje Başlığı</label>
     @Html.TextBoxFor(x => x.Title, new { @class = "table table - bordered" })
@@ -26,4 +26,5 @@
     <label>Yeni Proje Kategorisi</label>
     @Html.DropDownListFor(x => x.ProjectCategory, (List<SelectListItem>)ViewBag.v, new { @class = "table table - bordered" })
     <button class="btn btn-info">Kaydet</button>
+    <td><a href="/Project/Index" class="btn btn-outline-danger">Geri dön</a></td>
 </form>
